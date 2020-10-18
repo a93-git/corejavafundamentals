@@ -11,6 +11,9 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import in.a93.fundamentals.Employee;
+import in.a93.fundamentals.Chapter4;
+
 /**
  * Very important
  * multi line
@@ -32,6 +35,31 @@ public class Class1 {
         if ((args.length != 0) && (args[0].equals("-g"))) {
             System.out.println("Goodbye, cruel world!!");
         }
+
+        Employee a = new Employee("a", 2222, 2019, 01, 02);
+        Employee b = new Employee("b", 3333, 2020, 02, 03);
+
+        System.out.println("Employee info before change:");
+        CallByReference.printInfo(a, b);
+        CallByReference.swap(a, b);
+        System.out.println("Employee info after change:");
+        CallByReference.printInfo(a, b);
+//        Static.testStatic();
+//        System.out.println(Employee.val);
+//        var emp1 = new Employee("Employee 1", 5_000_000.0D, 2019, 04, 01);
+//        emp1.getId();
+//        var emp2 = new Employee("Employee 1", 5_000_000.0D, 2019, 04, 01);
+//        emp2.getId();
+
+//        var emp1 = new Employee("Employee 1", 5_000_000.0D, 2019, 04, 01);
+//        Employee emp2 = new Employee("Employee 1", 4_000_000.9D, 2020, 03, 02);
+//
+//        System.out.println("Are the two employee names same?" + emp1.equals(emp2));
+//        Employee.test();
+//        Chapter4.printCalendar();
+//        Chapter4.localDate();
+//        Chapter4.date();
+//        Chapter4.test();
 //        System.out.println("Hellooooo!!!, World\n");
 //        numbers();
 //        stringsNChars();
@@ -49,7 +77,7 @@ public class Class1 {
 //        for_loops();
 //        continue_statement();
 //        arrays();
-        multi_dim_arrays();
+//        multi_dim_arrays();
     }
 
     public static void multi_dim_arrays() {
