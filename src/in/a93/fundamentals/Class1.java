@@ -270,7 +270,7 @@ public class Class1 {
         System.out.println("\\u2122 denotes: " + a);
         System.out.println("This is a string with single char: " + b);
         System.out.println("This will not be printed completely\b\b\b\b\b");
-        boolean char_type = Character.isJavaIdentifierStart('अ');
+        boolean char_type = Character.isJavaIdentifierStart('a');
 
         // Substrings
         String m = "lskjflsdjfdlj dk jlkdjfj slkjlsj lkajlkjsdlk jdlkjlkdsjfl kjsdl j";
