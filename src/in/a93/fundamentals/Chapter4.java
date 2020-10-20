@@ -187,3 +187,21 @@ class CallByReference {
         System.out.println(b.getName());
     }
 }
+
+class ConstructorExample {
+
+    // Constructor overloading and calling another constructor
+    public ConstructorExample() {
+        this("World!");
+    }
+
+    public ConstructorExample(String string) {
+        this("Hello", string);
+    }
+
+    public ConstructorExample(String string1, String string2) {
+        System.out.println(string1 + " " + string2 + "!");
+    }
+
+
+}

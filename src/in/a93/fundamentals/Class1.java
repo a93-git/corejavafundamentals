@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.concurrent.CompletionService;
 
 import in.a93.fundamentals.Employee;
 import in.a93.fundamentals.Chapter4;
@@ -36,14 +37,17 @@ public class Class1 {
             System.out.println("Goodbye, cruel world!!");
         }
 
-        Employee a = new Employee("a", 2222, 2019, 01, 02);
-        Employee b = new Employee("b", 3333, 2020, 02, 03);
+        ConstructorExample yo = new ConstructorExample();
+        ConstructorExample yoyo = new ConstructorExample("Bello");
+        ConstructorExample yoyoyo = new ConstructorExample("Jhinga", "Lala");
+//        Employee a = new Employee("a", 2222, 2019, 01, 02);
+//        Employee b = new Employee("b", 3333, 2020, 02, 03);
 
-        System.out.println("Employee info before change:");
-        CallByReference.printInfo(a, b);
-        CallByReference.swap(a, b);
-        System.out.println("Employee info after change:");
-        CallByReference.printInfo(a, b);
+//        System.out.println("Employee info before change:");
+//        CallByReference.printInfo(a, b);
+//        CallByReference.swap(a, b);
+//        System.out.println("Employee info after change:");
+//        CallByReference.printInfo(a, b);
 //        Static.testStatic();
 //        System.out.println(Employee.val);
 //        var emp1 = new Employee("Employee 1", 5_000_000.0D, 2019, 04, 01);
