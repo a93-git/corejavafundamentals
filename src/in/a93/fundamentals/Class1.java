@@ -8,12 +8,17 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.CompletionService;
 
 import in.a93.fundamentals.Employee;
 import in.a93.fundamentals.Chapter4;
+import in.a93.fundamentals.Chapter5;
+import javax.swing.text.AttributeSet;
+import in.a93.fundamentals.Ch5Employee;
+import in.a93.fundamentals.Ch5Manager;
 
 /**
  * Very important
@@ -37,9 +42,88 @@ public class Class1 {
             System.out.println("Goodbye, cruel world!!");
         }
 
-        ConstructorExample yo = new ConstructorExample();
-        ConstructorExample yoyo = new ConstructorExample("Bello");
-        ConstructorExample yoyoyo = new ConstructorExample("Jhinga", "Lala");
+
+        
+        // Enumeration classes
+//        System.out.println(Ch5Person.a.getAbb());
+        // Arrays of primitive types are also class objects that extends Object class
+//        int[] a = new int[3];
+//        char[] b = new char[3];
+//        boolean[] c = new boolean[3];
+//        System.out.println(Arrays.toString(a));
+//        System.out.println(Arrays.toString(b));
+//        System.out.println(Arrays.toString(c));
+//        System.out.println(a.toString());
+//        System.out.println(b.toString());
+//        System.out.println(c.toString());
+
+//        System.out.println((a instanceof Object) + " " + a.getClass());
+//        System.out.println((b instanceof Object) + " " + b.getClass());
+//        System.out.println((c instanceof Object) + " " + c.getClass());
+//        var persons = new Ch5Person[2];
+//        persons[0] = new Ch5Student("MyName", "My Description");
+//        persons[1] = new Ch5Student("YourName", "Your Description");
+
+        // Here the temp var person never refers to the Ch5Person object
+        // because it is impossible to define a Ch5Person object (it is abstract)
+        // It always refers to the Ch5Student type where the methods are defined
+        // If the abstract methods were omitted from the abstract class
+        // following expression couldn't have been possible because the compiler
+        // ensures that we can only call methods that are available in the class
+//        for (Ch5Person person : persons) {
+//            System.out.println("Class of temp var is: " + person.getClass());
+//            System.out.println(person.getName() + " " + person.getDescription());
+//        }
+//        Ch5Manager a = new Ch5Manager(5000, 2000);
+//        Ch5Employee b = new Ch5Employee(5000);
+//        if (a instanceof Ch5Employee) {
+//            System.out.println("Object of type manager is instance of type employee");
+//        } else {
+//            System.out.println("Object of type manager is not instance of type employee");
+//        }
+//        if (b instanceof Ch5Manager) {
+//            System.out.println("Object of type employee is instance of type manager");
+//        } else {
+//            System.out.println("Object of type employee is not instance of type manager");
+//        }
+//        a.test_method();
+//        Ch5Manager.test_method();
+//        Ch5Employee.test_method();
+//        Ch5Employee emp = new Ch5Employee(2000);
+//        Ch5Manager manager = new Ch5Manager(15000, 5000);
+
+//        System.out.println("Creating manager array:");
+//        Ch5Manager[] manager_array = new Ch5Manager[2];
+//
+//        System.out.println("Assign manager_array to emp_array:");
+//        Ch5Employee[] emp_array = manager_array;
+//
+//        System.out.println("Create new employee type object and assign to emp_array[0]:");
+
+        // Throws ArrayStoreException because the emp_array[0] refers to Manager type
+        // which is a subclass of employee type
+        // We can assign a subclass object to a superclass variable but not vice versa
+        //        emp_array[0] = new Ch5Employee(15000);
+
+//        System.out.println("Getting class of emp_array[0]:");
+//        emp_array[0].getClass();
+//        System.out.println("Getting class of manager_array[0]:");
+//        manager_array[0].getClass();
+//        System.out.println("Assign manager type object to manager_array[1]:");
+//        manager_array[1] = new Ch5Manager(15000, 2000);
+//        System.out.println("Get salary for manager_array[1] using getSalaryWithBonus():");
+//        manager_array[1].getSalaryWithBonus();
+//        System.out.println("Check the class of emp_array[1]:");
+//        emp_array[1].getClass();
+//        Chapter5 a = new Chapter5("Plutonian", "FooBar", 15);
+//        Chapter5 a = new Chapter5();
+//        a.printInfo();
+//        System.out.println("Name from inherited function: " + a.getName());
+//        System.out.println("Distance from office from inherited function: " + a.getDistanceFromOffice());
+
+//        ConstructorExample yo = new ConstructorExample();
+//        ConstructorExample yoyo = new ConstructorExample("Bello");
+//        ConstructorExample yoyoyo = new ConstructorExample("Jhinga", "Lala");
 //        Employee a = new Employee("a", 2222, 2019, 01, 02);
 //        Employee b = new Employee("b", 3333, 2020, 02, 03);
 
