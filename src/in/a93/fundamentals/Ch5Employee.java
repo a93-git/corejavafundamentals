@@ -1,8 +1,11 @@
 package in.a93.fundamentals;
 
-public class Ch5Employee {
+public class Ch5Employee implements Cloneable {
     private int salary;
 
+    public Ch5Employee clone() throws CloneNotSupportedException {
+        return (Ch5Employee) super.clone();
+    }
     public static void test_method() {
         System.out.println("This is a static method in superclass");
     }
@@ -15,7 +18,7 @@ public class Ch5Employee {
         return salary;
     }
 
-    private void setSalary(int salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 }

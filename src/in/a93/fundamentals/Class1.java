@@ -10,12 +10,15 @@ import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.util.concurrent.CompletionService;
 
 import in.a93.fundamentals.Employee;
 import in.a93.fundamentals.Chapter4;
 import in.a93.fundamentals.Chapter5;
+
+import javax.swing.*;
 import javax.swing.text.AttributeSet;
 import in.a93.fundamentals.Ch5Employee;
 import in.a93.fundamentals.Ch5Manager;
@@ -34,7 +37,7 @@ public class Class1 {
         CLASS_FINAL = "This is a class level constant";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         System.out.println("We are in the main block\n");
 
         // Parsing the CLI arguments
@@ -42,8 +45,49 @@ public class Class1 {
             System.out.println("Goodbye, cruel world!!");
         }
 
+        var a = new Ch6Lambda();
+        a.print_everything();
 
-        
+//         Ch6 example using Ch5 classes
+//        var cloneable = new Ch5Employee(5000);
+//        Ch5Employee cloned = (Ch5Employee) cloneable.clone();
+//        cloned.setSalary(10000);
+//        System.out.println("Salary of cloneable is: " + cloneable.getSalary() + " and toString value is: " + cloneable);
+//        System.out.println("Salary of cloned is: " + cloned.getSalary() + " and toString value is: " + cloned);
+//        var timer = new Ch6CallBack();
+//        var time_event = new Timer(1000, timer);
+//        System.out.println("The available listeners are: " + time_event.getActionListeners());
+//        time_event.start();
+//
+//        JOptionPane.showMessageDialog(null, "Quit program?");
+//        "abc".compareTo("def");
+//        System.exit(0);
+        // Interfaces
+//        var a = new Ch6Interfaces(5000);
+//        var b = new Ch6Interfaces(4000);
+//        System.out.println(a.compareTo(b));
+//        Ch6Interfaces[] c = new Ch6Interfaces[5];
+//        c[0] = a;
+//        c[1] = b;
+//        c[2] = new Ch6Interfaces(10000);
+//        c[3] = new Ch6Interfaces(5);
+//        c[4] = new Ch6Interfaces(251);
+
+//        System.out.println("Unsorted array:");
+//        for (Ch6Interfaces i : c) {
+//            System.out.println(i.toString());
+//        }
+//
+//        Arrays.sort(c);
+
+        // Reverse sort
+//        Arrays.sort(c, Comparator.reverseOrder());
+
+//        System.out.println("Sorted array:");
+//        for (Ch6Interfaces i : c) {
+//            System.out.println(i.toString());
+//        }
+
         // Enumeration classes
 //        System.out.println(Ch5Person.a.getAbb());
         // Arrays of primitive types are also class objects that extends Object class
